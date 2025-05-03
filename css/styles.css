@@ -35,10 +35,6 @@ body {
     margin: 0 auto;
 }
 
-img {
-    width: 10%;
-}
-
 a {
     text-decoration: none;
     color: #303030;
@@ -78,6 +74,8 @@ p {
     font-size: 1.8rem;
     font-weight: 500;
 
+    line-height: 28px;
+
     margin: 0;
 }
 
@@ -108,12 +106,28 @@ section {
     display: inline-block;
     background-color: #38A9EB;
     padding: 10px 30px;
+    border: 2px #38a9eb00 solid;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.bleu_btn:hover {
+    background-color: #303030;
+    color: #38A9EB;
+    border: 2px #38A9EB solid;
 }
 
 .gray_btn {
     display: inline-block;
     padding: 15px 40px;
     border: 2px #303030 solid;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.gray_btn:hover {
+    background-color: #303030;
+    color: #38A9EB;
 }
 
 i {
@@ -129,6 +143,26 @@ i {
     height: 50px;
 
     margin: 10px 10px 0px 0px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+i:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    font-size: 1.8rem;
+    border: 2px #303030 solid;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+    margin: 10px 10px 0px 0px;
+
+    background-color: #303030;
+    color: #38A9EB;
 }
 
 /*------------------------------------------------------------------------------
@@ -161,6 +195,46 @@ header nav li {
 
 header nav h1 {
     text-transform: capitalize;
+}
+
+header .button-bordered {
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+header .button-bordered::before,
+header .button-bordered::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+
+header .button-bordered::after {
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    border-bottom: 1.5px solid #303030;
+}
+
+header .button-bordered:hover::before,
+header .button-bordered:hover::after {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 15px;
 }
 
 /*------------------------------------------------------------------------------
@@ -290,12 +364,34 @@ header nav h1 {
 .produit .card {
     text-align: center;
     padding-bottom: 15px;
+    position: relative;
+    
+    
 }
 
 .produit .row img {
     width: 90%;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: #38a9eb00 9px solid;
+    
+    transition: all 0.3s ease-in-out;
 }
+
+.produit .card:hover img {
+    width: 90%;
+    margin-bottom: 20px;
+    filter: brightness(70%);
+    border: #38A9EB 9px solid;
+
+
+    color: #38A9EB;
+}
+
+
+.card:hover .plus {
+    color: #38A9EB;
+}
+
 
 .produit .card h3 {
     color: #38A9EB;
@@ -317,6 +413,18 @@ header nav h1 {
     padding: 5px 10px;
     margin: 0 40px 0 10px;
 }
+
+.produit .plus {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+    font-size: 14.4rem;
+    color: #38a9eb00;
+}
+
 
 /*------------------------------------------------------------------------------
    Nous contacter
@@ -367,6 +475,11 @@ header nav h1 {
 }
 
 
+/*------------------------------------------------------------------------------
+   Footer
+------------------------------------------------------------------------------*/
+
+
 footer {
     background-color: #38A9EB;
     color: #303030;
@@ -377,4 +490,41 @@ footer .wrapper {
     justify-content: space-between;
     align-items: center;
     height: 125px;
+}
+
+
+/*------------------------------------------------------------------------------
+   Vedette
+------------------------------------------------------------------------------*/
+
+
+.vedette .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.vedette img{
+    width: 70%;
+}
+
+.vedette h2{
+    color: #38A9EB;
+}
+
+.vedette .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vedette .title p{
+    text-align: start;
+
+    padding-bottom: 70px;
+}
+
+.vedette .main{
+    display: flex;
+    justify-content: center;
 }
