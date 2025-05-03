@@ -20,7 +20,7 @@ html {
    Base
 ------------------------------------------------------------------------------*/
 
-body{
+body {
     background-color: #303030;
     color: #fff;
     font-family: "Montserrat", sans-serif;
@@ -30,13 +30,351 @@ body{
 
 }
 
-.wrapper{
+.wrapper {
     max-width: 1320px;
     margin: 0 auto;
 }
 
+img {
+    width: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: #303030;
+
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3.6rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 5.2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    margin: 0;
+}
 
 
 /*------------------------------------------------------------------------------
    Modules
 ------------------------------------------------------------------------------*/
+
+section {
+    padding: 50px 60px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 30px;
+}
+
+.title p {
+    width: 610px;
+    text-align: center;
+}
+
+.bleu_btn {
+    display: inline-block;
+    background-color: #38A9EB;
+    padding: 10px 30px;
+}
+
+.gray_btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 2px #303030 solid;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    font-size: 1.8rem;
+    border: 2px #303030 solid;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+    margin: 10px 10px 0px 0px;
+}
+
+/*------------------------------------------------------------------------------
+   Header
+------------------------------------------------------------------------------*/
+
+header {
+    background-color: #38A9EB;
+
+    height: 60px;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+header nav h1 {
+    text-transform: capitalize;
+}
+
+/*------------------------------------------------------------------------------
+   Hero
+------------------------------------------------------------------------------*/
+
+.hero {
+    background-image: url(../images/montagne_lac.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding-bottom: 60px;
+}
+
+.hero .wrapper {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    height: 650px;
+}
+
+.hero .hero-box {
+    background-color: #303030;
+    width: 560px;
+    height: 220px;
+
+    padding: 30px;
+}
+
+.hero .hero-box h1 {
+    color: #38A9EB;
+    padding-bottom: 10px;
+}
+
+
+/*------------------------------------------------------------------------------
+   Call to action 
+------------------------------------------------------------------------------*/
+
+.cta {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cta h2 {
+    color: #38A9EB;
+}
+
+.cta p {
+    width: 765px;
+    padding: 10px 0 30px 0;
+}
+
+
+/*------------------------------------------------------------------------------
+   Our team
+------------------------------------------------------------------------------*/
+
+.team {
+    background-color: #38A9EB;
+    color: #303030;
+
+}
+
+.team .sub-title {
+    width: 600px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+
+.team .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 115px;
+}
+
+
+.team .img {
+    width: 363px;
+    height: 363px;
+    border-radius: 50%;
+}
+
+.team .leo {
+    background: url(../images/Leo_Marchand.jpg) center / cover no-repeat;
+}
+
+.team .camille {
+    background: url(../images/Camille_Dupont.jpg) center / cover no-repeat;
+}
+
+.team .maxime {
+    background: url(../images/Maxime_Lefevre.jpg) center / cover no-repeat;
+}
+
+.team .card {
+    text-align: center;
+}
+
+.team .card h3 {
+    padding-top: 50px;
+}
+
+
+/*------------------------------------------------------------------------------
+   Our Products
+------------------------------------------------------------------------------*/
+
+.produit {
+    display: flex;
+    justify-content: center;
+}
+
+.produit h2 {
+    color: #38A9EB;
+}
+
+.produit .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+.produit .card {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.produit .row img {
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+.produit .card h3 {
+    color: #38A9EB;
+}
+
+.produit .definition {
+    padding: 10px 0;
+}
+
+.produit .labels {
+    display: flex;
+    padding: 35px 0;
+}
+
+.produit .labels p {
+    background-color: #38A9EB;
+    color: #303030;
+
+    padding: 5px 10px;
+    margin: 0 40px 0 10px;
+}
+
+/*------------------------------------------------------------------------------
+   Nous contacter
+------------------------------------------------------------------------------*/
+
+.contact {
+    background-color: #38A9EB;
+    margin: 50px 60px;
+    color: #303030;
+}
+
+.contact h2 {
+    padding-bottom: 20px;
+}
+
+.contact .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.contact .icons {
+    display: flex;
+    padding-top: 20px;
+}
+
+.contact .texte {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .texte p:nth-child(n + 2) {
+    font-weight: 700;
+}
+
+.contact .texte p:nth-child(2),
+.contact .texte p:nth-child(2) {
+    padding: 20px 0;
+}
+
+.contact .title .gray_btn {
+    margin-top: 30px;
+}
+
+.contact .title {
+    padding: 0;
+}
+
+
+footer {
+    background-color: #38A9EB;
+    color: #303030;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 125px;
+}
