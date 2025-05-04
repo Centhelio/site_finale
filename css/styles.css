@@ -69,6 +69,13 @@ h3 {
     font-weight: 700;
 }
 
+h4 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+}
+
 p {
     font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
@@ -93,8 +100,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding-bottom: 30px;
 }
 
 .title p {
@@ -165,6 +170,68 @@ i:hover {
     color: #38A9EB;
 }
 
+/* GRAY BOTTOM BORDER */
+.button-bordered {
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.button-bordered::before,
+.button-bordered::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+
+.button-bordered::after {
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    border-bottom: 1.5px solid #303030;
+}
+
+.button-bordered:hover::before,
+.button-bordered:hover::after {
+    width: 100%;
+}
+
+
+/* BLUE BOTTOM BORDER */
+.button-bordered-blue {
+    border: none;
+    outline: none;
+    position: relative;
+    color: #38A9EB;
+}
+
+.button-bordered-blue::before,
+.button-bordered-blue::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+
+.button-bordered-blue::after {
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    border-bottom: 1.5px solid #38A9EB;
+}
+
+.button-bordered-blue:hover::before,
+.button-bordered-blue:hover::after {
+    width: 100%;
+}
+
 /*------------------------------------------------------------------------------
    Header
 ------------------------------------------------------------------------------*/
@@ -195,35 +262,6 @@ header nav li {
 
 header nav h1 {
     text-transform: capitalize;
-}
-
-header .button-bordered {
-    border: none;
-    outline: none;
-    position: relative;
-}
-
-header .button-bordered::before,
-header .button-bordered::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    transition: all 0.3s;
-    pointer-events: none;
-}
-
-
-header .button-bordered::after {
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    border-bottom: 1.5px solid #303030;
-}
-
-header .button-bordered:hover::before,
-header .button-bordered:hover::after {
-    width: 100%;
 }
 
 .logo {
@@ -365,15 +403,15 @@ header .button-bordered:hover::after {
     text-align: center;
     padding-bottom: 15px;
     position: relative;
-    
-    
+
+
 }
 
 .produit .row img {
     width: 90%;
     margin-bottom: 20px;
     border: #38a9eb00 9px solid;
-    
+
     transition: all 0.3s ease-in-out;
 }
 
@@ -498,33 +536,138 @@ footer .wrapper {
 ------------------------------------------------------------------------------*/
 
 
-.vedette .wrapper{
+.vedette .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
 
-.vedette img{
+.vedette img {
     width: 70%;
 }
 
-.vedette h2{
+.vedette h2 {
     color: #38A9EB;
 }
 
-.vedette .title{
+.vedette .title {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.vedette .title p{
+.vedette .title p {
     text-align: start;
 
     padding-bottom: 70px;
 }
 
-.vedette .main{
+.vedette .main {
     display: flex;
     justify-content: center;
+}
+
+
+/*------------------------------------------------------------------------------
+   Fiche
+------------------------------------------------------------------------------*/
+
+.fiche {
+    background-color: white;
+}
+
+.fiche .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 7fr 5fr;
+}
+
+.fiche img {
+    width: 100%;
+}
+
+.fiche h2 {
+    color: #38A9EB;
+    text-align: start;
+    padding: 20px 0;
+}
+
+.fiche .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #303030;
+    padding: 20px 50px;
+}
+
+.fiche .title p {
+    text-align: start;
+    padding-bottom: 30px;
+}
+
+.fiche .main {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fiche .prix {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+
+/*------------------------------------------------------------------------------
+   Inforamtions
+------------------------------------------------------------------------------*/
+
+
+.inforamtions {
+    background-color: #38A9EB;
+    margin: 50px 60px;
+    color: #303030;
+}
+
+.inforamtions p {
+    font-size: 1.5rem;
+}
+
+.inforamtions .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.scpecification li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 10px 0;
+    border-bottom: 1px solid #303030;
+}
+
+.scpecification li p:first-of-type {
+    font-weight: 700;
+}
+
+.inforamtions ul {
+    padding: 0;
+    margin: 0;
+}
+
+.inforamtions h2 {
+    text-align: start;
+    margin-bottom: 25px;
+    border-bottom: #303030 solid 2px;
+    width: 400px;
+}
+
+.inforamtions a{
+    margin-top: 25px;
+}
+
+/*------------------------------------------------------------------------------
+   Inforamtions
+------------------------------------------------------------------------------*/
+
+.produit h2{
+    padding-bottom: 25px;
 }
